@@ -40,27 +40,34 @@ public class MainActivity extends AppCompatActivity {
             case R.id.LondonFragment:
                 getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new London()).commit();
                 getSupportActionBar().setTitle("London");
-                return true;
+                break;
+
             case R.id.GlasgowFragment:
                 getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Glasgow()).commit();
                 getSupportActionBar().setTitle("Glasgow");
-                return true;
+                break;
+
             case R.id.NewYorkFragment:
                 getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new NewYork()).commit();
                 getSupportActionBar().setTitle("NewYork");
-                return true;
+                break;
+
             case R.id.OmanFragment:
                 getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Oman()).commit();
                 getSupportActionBar().setTitle("Oman");
-                return true;
+                break;
+
             case R.id.MauritiusFragment:
                 getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Mauritius()).commit();
                 getSupportActionBar().setTitle("Mauritius");
-                return true;
-                case R.id.BangladeshFragment:
-                            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Bangladesh()).commit();
-                            getSupportActionBar().setTitle("Bangladesh");
-                       return true;
+                break;
+
+            case R.id.BangladeshFragment:
+                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Bangladesh()).commit();
+                getSupportActionBar().setTitle("Bangladesh");
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
         }
         return false;
     }
@@ -80,27 +87,23 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.LondonFragment);
-        bottomNavigationView.setSelectedItemId(R.id.GlasgowFragment);
-        bottomNavigationView.setSelectedItemId(R.id.NewYorkFragment);
-        bottomNavigationView.setSelectedItemId(R.id.OmanFragment);
-        bottomNavigationView.setSelectedItemId(R.id.MauritiusFragment);
-        //bottomNavigationView.setSelectedItemId(R.id.BangladeshFragment);
 
 
-//        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-//            @RequiresApi(api = Build.VERSION_CODES.ECLAIR)
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//                {
-//                    switch (item.getItemId()) {
-//                        case R.id.LondonFragment:
-//                            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new London()).commit();
-//                            getSupportActionBar().setTitle("London");
-//                            return true;
-//                    }
-//                }
-//                return false;
-//            }
-//        });
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @RequiresApi(api = Build.VERSION_CODES.ECLAIR)
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                {
+                    switch (item.getItemId()) {
+                        case R.id.LondonFragment:
+                            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new London()).commit();
+                            getSupportActionBar().setTitle("London");
+                            return true;
+                    }
+                }
+                return false;
+            }
+        });
     }
 }
