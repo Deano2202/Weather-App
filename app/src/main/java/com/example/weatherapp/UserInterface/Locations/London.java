@@ -84,8 +84,10 @@ public class London extends Fragment {
         });
     }
 
-
     private void setValuesOnAdapter() {
+        if (getActivity() == null)
+            return;
+
         getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {

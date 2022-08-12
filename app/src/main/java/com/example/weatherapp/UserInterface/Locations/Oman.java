@@ -85,6 +85,9 @@ public class Oman extends Fragment {
     }
 
     private void setValuesOnAdapter() {
+        if (getActivity() == null)
+            return;
+
         getActivity().runOnUiThread(() -> {
             adapter = new WeatherAdapter(accidentList,getActivity());
             if (adapter.getItemCount() > 0) {

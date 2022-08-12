@@ -18,11 +18,11 @@
     <!--        android:icon="@drawable/planned_roads"/>-->
 
     <item android:id="@+id/MauritiusFragment"
-        android:title="@string/Mauritius" />
+        android:title="@string/Mauritius"/>
     <!--        android:icon="@drawable/planned_roads"/>-->
 
 <!--    <item-->
 <!--        android:id="@+id/BangladeshFragment"-->
 <!--        android:title="@string/Bangladesh" />-->
-    <!--        android:icon="@drawable/planned_roads"/>-->
+<!--            android:icon="@drawable/planned_roads"/>-->
 </menu>
