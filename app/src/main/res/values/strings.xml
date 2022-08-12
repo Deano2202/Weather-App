@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="London" />
+    <string name="Glasgow" />
+    <string name="NewYork" />
+    <string name="Oman" />
+    <string name="Mauritius" />
+    <string name="Bangladesh" />
+</resources>

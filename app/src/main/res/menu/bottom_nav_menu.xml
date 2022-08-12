@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/LondonFragment"
+          android:title="@string/London"/>
+<!--          android:icon="@drawable/road_incident"/>-->
+
+    <item
+        android:id="@+id/GlasgowFragment"
+        android:title="@string/Glasgow" />
+    <!--        android:icon="@drawable/road_works"-->
+
+    <item android:id="@+id/NewYorkFragment"
+        android:title="@string/NewYork" />
+    <!--        android:icon="@drawable/planned_roads"/>-->
+
+    <item android:id="@+id/OmanFragment"
+        android:title="@string/Oman" />
+    <!--        android:icon="@drawable/planned_roads"/>-->
+
+    <item android:id="@+id/MauritiusFragment"
+        android:title="@string/Mauritius" />
+    <!--        android:icon="@drawable/planned_roads"/>-->
+
+<!--    <item-->
+<!--        android:id="@+id/BangladeshFragment"-->
+<!--        android:title="@string/Bangladesh" />-->
+    <!--        android:icon="@drawable/planned_roads"/>-->
+</menu>
