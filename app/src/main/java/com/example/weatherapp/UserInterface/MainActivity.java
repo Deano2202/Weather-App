@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setTitle("Locations");
+        getSupportActionBar().setTitle("London");
         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new London()).commit();
         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Glasgow()).commit();
         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new NewYork()).commit();
