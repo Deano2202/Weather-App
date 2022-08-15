@@ -33,7 +33,7 @@ public class DetailedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        getSupportActionBar().setTitle("Deatiled Activity");
+        getSupportActionBar().setTitle("Detailed Activity");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         detail_title = findViewById(R.id.detail_title);

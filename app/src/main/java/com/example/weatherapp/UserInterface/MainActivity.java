@@ -14,8 +14,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.weatherapp.R;
-import com.example.weatherapp.UserInterface.Locations.London;
 import com.example.weatherapp.UserInterface.Locations.Glasgow;
+import com.example.weatherapp.UserInterface.Locations.London;
 import com.example.weatherapp.UserInterface.Locations.NewYork;
 import com.example.weatherapp.UserInterface.Locations.Oman;
 import com.example.weatherapp.UserInterface.Locations.Mauritius;
@@ -37,14 +37,14 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         //Handling the item selection
         switch (item.getItemId()) {
-            case R.id.LondonFragment:
-                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new London()).commit();
-                getSupportActionBar().setTitle("London");
-                break;
-
             case R.id.GlasgowFragment:
                 getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Glasgow()).commit();
                 getSupportActionBar().setTitle("Glasgow");
+                break;
+
+            case R.id.LondonFragment:
+                getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new London()).commit();
+                getSupportActionBar().setTitle("London");
                 break;
 
             case R.id.NewYorkFragment:
@@ -77,16 +77,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setTitle("London");
-        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new London()).commit();
+        getSupportActionBar().setTitle("Glasgow");
         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Glasgow()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new London()).commit();
         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new NewYork()).commit();
         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Oman()).commit();
         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Mauritius()).commit();
         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Bangladesh()).commit();
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setSelectedItemId(R.id.LondonFragment);
+        bottomNavigationView.setSelectedItemId(R.id.GlasgowFragment);
 
 
 
@@ -96,9 +96,9 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 {
                     switch (item.getItemId()) {
-                        case R.id.LondonFragment:
-                            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new London()).commit();
-                            getSupportActionBar().setTitle("London");
+                        case R.id.GlasgowFragment:
+                            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, new Glasgow()).commit();
+                            getSupportActionBar().setTitle("Glasgow");
                             return true;
                     }
                 }
