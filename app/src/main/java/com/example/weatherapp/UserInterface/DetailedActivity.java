@@ -12,17 +12,12 @@ import android.widget.TextView;
 import com.example.weatherapp.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.SupportMapFragment;
 
 import java.util.List;
 
 public class DetailedActivity extends AppCompatActivity {
 
     TextView detail_title, detail_desc, detail_link, detail_pubDate;
-
-    SupportMapFragment mapFragment;
-    GoogleMap googleMap;
     FusedLocationProviderClient fusedLocationProviderClient;
 
     private String latTxt = "";
@@ -51,8 +46,6 @@ public class DetailedActivity extends AppCompatActivity {
         String[] latLngParts = latLng.split(" ");
         latTxt = latLngParts[0];
         longTxt = latLngParts[1];
-
-        //mapFragment = (R.id.map);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
         detail_link.setOnClickListener(new View.OnClickListener() {
@@ -62,5 +55,7 @@ public class DetailedActivity extends AppCompatActivity {
                 startActivity(browserIntent);
             }
         });
+
+
     }
 }
